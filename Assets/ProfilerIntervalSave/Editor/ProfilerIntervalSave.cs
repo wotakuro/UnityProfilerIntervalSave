@@ -11,7 +11,7 @@ using UnityEditorInternal;
 using UnityEngine.Profiling;
 
 public class ProfilerIntervalSave : EditorWindow {
-
+    private const string DefaultSaveDir = "ProfilerIntervalSave";
     private const string EditorIdentifier = "Editor";
     private static readonly string[] modeSelect = { "Recorder", "Viewer" };
     private const int MODE_RECORDER = 0;
@@ -58,6 +58,14 @@ public class ProfilerIntervalSave : EditorWindow {
 
     void Awake()
     {
+        string defaultPath = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), DefaultSaveDir);
+        if ( !System.IO.Directory.Exists(defaultPath))
+        {
+            System.IO.Directory.CreateDirectory(defaultPath);
+        }
+        this.saveDir = defaultPath;
+
+
         savedCondition.Clear();
         this.CallProfilerWindow();
         this.mode = 0;
