@@ -48,6 +48,7 @@ public class ProfilerIntervalSave : EditorWindow {
 
     private int mode;
 
+    private int stopPlayingCount;
 
 
     [MenuItem("Tools/ProfilerIntervalSave")]
@@ -184,6 +185,16 @@ public class ProfilerIntervalSave : EditorWindow {
         string target = ProfilerDriver.GetConnectionIdentifier(ProfilerDriver.connectedProfiler).Replace('.','_').Replace('@','_').Replace(':','_');
         int firstFrameIdx = ProfilerDriver.firstFrameIndex;
         int lastFrameIdx = ProfilerDriver.lastFrameIndex;
+        // update
+        if (target == EditorIdentifier)
+        {
+            if (IsEditorStopPlaying() )
+            {
+                ++ stopPlayingCount;
+            }else{
+                stopPlayingCount = 0;
+            }
+        }
 
         // cleared Profiler History
         if (lastFrameIdx < savedCondition.lastIndex)
@@ -217,7 +228,7 @@ public class ProfilerIntervalSave : EditorWindow {
             return true;
         }
         // stop in editor play
-        if (target == EditorIdentifier && (!EditorApplication.isPlaying && !EditorApplication.isPaused) &&
+        if (target == EditorIdentifier && IsEditorStopPlaying() && this.stopPlayingCount > 4 &&
             !(savedCondition.firstIndex == firstFrameIdx && savedCondition.lastIndex == lastFrameIdx) )
         {
             return true;
@@ -227,6 +238,11 @@ public class ProfilerIntervalSave : EditorWindow {
             return true;
         }
         return false;
+    }
+
+    private static bool IsEditorStopPlaying()
+    {
+        return (!EditorApplication.isPlaying && !EditorApplication.isPaused);
     }
 
 
