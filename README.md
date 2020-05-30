@@ -14,7 +14,7 @@ It is possible to save the result of Unity profiler by watching the status of Un
 Call "Tools->IntervalProfilerSave", then window will appear.<br/>
 ※This tool requires ProfilerWindow.
 
-![Alt text](/doc/img/IntervalRecordMode.png)
+![Alt text](/Documentation~/img/IntervalRecordMode.png)
 
 1).Directory that log files will be saved<br />
 2).Mode change tab."Recorder"<br />
@@ -26,7 +26,7 @@ Call "Tools->IntervalProfilerSave", then window will appear.<br/>
 
 ## How to watch log
 
-![Alt text](/doc/img/IntervalViewMode.png)
+![Alt text](/Documentation~/img/IntervalViewMode.png)
 
 1).Refresh the list of files.<br />
 2).Profiler will read the file.<br />

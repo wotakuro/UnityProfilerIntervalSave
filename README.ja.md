@@ -13,7 +13,7 @@ Unity5.6より、ProfilerWindowに表示された内容をファイルに書き�
 MenuよりTools->IntervalProfilerSave で、このツールを呼び出してください。ウィンドウが出てくるはずです。<br/>
 ※このツールはProfilerWindowが有効な状態でないと利用できません。
 
-![Alt text](/doc/img/IntervalRecordMode.png)
+![Alt text](/Documentation~/img/IntervalRecordMode.png)
 
 1).ログを書き出すディレクトリの指定をしてください<br />
 2).モード切替を行います。Recorderが結果をファイルに逐次書き出すモードです。<br />
@@ -25,7 +25,7 @@ MenuよりTools->IntervalProfilerSave で、このツールを呼び出してく
 
 ## 書き出したログの見方
 
-![Alt text](/doc/img/IntervalViewMode.png)
+![Alt text](/Documentation~/img/IntervalViewMode.png)
 
 1).Workingディレクトリ内にあるファイルをリストアップします<br />
 2).指定したファイルをProfilerへ読み込ませます<br />

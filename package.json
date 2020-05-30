@@ -1,0 +1,10 @@
+{
+  "category": "profiler",
+  "description": "Profiler log Interval Save ",
+  "keywords": [
+    "profiler"
+  ],
+  "name": "com.utj.profilersaveinter",
+  "unity": "2018.4",
+  "version": "1.0.0"
+}
