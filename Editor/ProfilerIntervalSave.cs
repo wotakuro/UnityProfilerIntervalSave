@@ -51,7 +51,7 @@ public class ProfilerIntervalSave : EditorWindow {
     private int stopPlayingCount;
 
 
-    [MenuItem("Tools/ProfilerIntervalSave")]
+    [MenuItem("Tools/UTJ/ProfilerIntervalSave")]
     public static void Create()
     {
         ProfilerIntervalSave.GetWindow<ProfilerIntervalSave>();

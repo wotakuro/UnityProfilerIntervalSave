@@ -5,6 +5,7 @@
     "profiler"
   ],
   "name": "com.utj.profilersaveinter",
+  "displayName": "Profiler Interval Save",
   "unity": "2018.4",
   "version": "1.0.0"
 }

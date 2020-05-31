@@ -10,7 +10,7 @@ Unity5.6より、ProfilerWindowに表示された内容をファイルに書き�
 こうすることで、Profilerの結果を保存することが可能になっています。<br />
 
 ## 利用方法
-MenuよりTools->IntervalProfilerSave で、このツールを呼び出してください。ウィンドウが出てくるはずです。<br/>
+MenuよりTools->UTJ->IntervalProfilerSave で、このツールを呼び出してください。ウィンドウが出てくるはずです。<br/>
 ※このツールはProfilerWindowが有効な状態でないと利用できません。
 
 ![Alt text](/Documentation~/img/IntervalRecordMode.png)

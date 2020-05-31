@@ -11,7 +11,7 @@ Also there is API "UnityEditorInternal.ProfilerDriver.SaveProfile".<br />
 It is possible to save the result of Unity profiler by watching the status of Unity Profiler and by calling "UnityEditorInternal.ProfilerDriver.SaveProfile" before over history (300 Frame)<br />
 
 ## How to record
-Call "Tools->IntervalProfilerSave", then window will appear.<br/>
+Call "Tools->UTJ->IntervalProfilerSave", then window will appear.<br/>
 ※This tool requires ProfilerWindow.
 
 ![Alt text](/Documentation~/img/IntervalRecordMode.png)
