@@ -217,7 +217,12 @@ public class ProfilerIntervalSave : EditorWindow {
 
     private bool ShouldSaveResult(string target,int firstFrameIdx, int lastFrameIdx)
     {
+#if UNITY_2019_3_OR_NEWER
+        // todo get from  ProfilerUserSettings.frameCount
+        int maxHistory = 300;
+#else
         int maxHistory = ProfilerDriver.maxHistoryLength;
+#endif
         if (lastFrameIdx <= 0)
         {
             return false;
@@ -258,9 +263,9 @@ public class ProfilerIntervalSave : EditorWindow {
         string path = System.IO.Path.Combine(saveDir, lastSaveFile);
         ProfilerDriver.SaveProfile( path );
     }
-    #endregion RECORD_MODE_LOGIC
+#endregion RECORD_MODE_LOGIC
 
-    #region VIEWER_MODE_LOGC
+#region VIEWER_MODE_LOGC
     private void OnEnterViewerMode()
     {
         ProfilerDriver.ClearAllFrames();
@@ -300,7 +305,7 @@ public class ProfilerIntervalSave : EditorWindow {
             fileList[i] = fileList[i].Substring( fileList[i].LastIndexOf(System.IO.Path.DirectorySeparatorChar) + 1 );
         }
     }
-    #endregion VIEWER_MODE_LOGC
+#endregion VIEWER_MODE_LOGC
 }
 
 #endif
