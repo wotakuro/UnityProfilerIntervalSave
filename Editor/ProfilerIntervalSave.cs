@@ -285,7 +285,11 @@ public class ProfilerIntervalSave : EditorWindow {
         {
             if (GUILayout.Button(file, GUILayout.Width(320)))
             {
+#if UNITY_2018_1_OR_NEWER
+                string path = System.IO.Path.Combine(saveDir,file );
+#else
                 string path = System.IO.Path.Combine(saveDir,file.Substring(0,file.Length-5) );
+#endif
                 Profiler.AddFramesFromFile(path);
             }
         }
